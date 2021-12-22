@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.example.recorder.SoundVisualizerView
+            android:id="@+id/soundVisualizerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@id/recordTimeTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            app:layout_constraintBottom_toBottomOf="@+id/recordButton"
+            app:layout_constraintEnd_toStartOf="@+id/recordButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recordButton"
+            tools:ignore="HardcodedText" />
+
+        <com.example.recorder.CountUpView
+            android:id="@+id/recordTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/recordButton"
+            app:layout_constraintEnd_toEndOf="@+id/recordButton"
+            app:layout_constraintStart_toStartOf="@+id/recordButton"
+            tools:ignore="HardcodedText" />
+
+        <com.example.recorder.RecordButton
+            android:id="@+id/recordButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="48dp"
+            android:padding="28dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@drawable/ic_record" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
